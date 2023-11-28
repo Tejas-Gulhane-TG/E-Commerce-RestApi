@@ -17,4 +17,10 @@ public class Orders {
 
     @Column(nullable = false, unique = true)
     int OrderId;
+
+    @Column(nullable = false)
+    String ProductName;
+
+    @Column(nullable = false)
+    double Price;
 }

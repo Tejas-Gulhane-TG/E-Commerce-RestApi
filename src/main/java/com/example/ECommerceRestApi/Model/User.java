@@ -19,12 +19,12 @@ public class User {
     int id;
 
     @Column(nullable = false)
-    String name;
+    String Name;
 
     @Column(nullable = false)
-    String address;
+    String Address;
 
     @Column(nullable = false, unique = true)
-    String mobileNo;
+    String MobileNo;
 
 }
