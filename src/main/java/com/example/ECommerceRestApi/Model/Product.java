@@ -1,12 +1,9 @@
 package com.example.ECommerceRestApi.Model;
 
-import com.example.ECommerceRestApi.Enum.Gender;
+import com.example.ECommerceRestApi.Enum.ProductType;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Data
@@ -14,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,19 +19,14 @@ public class User {
 
     String name;
 
-    String address;
+    String sellerName;
 
-    @Column(unique = true)
-    long mobileNo;
+    int quantity;
 
-    int age;
+    double price;
 
     @Enumerated(EnumType.STRING)
-    Gender gender;
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL )
-    List<Orders> orderList = new ArrayList<>();
-
+    ProductType productType;
 
 
 
