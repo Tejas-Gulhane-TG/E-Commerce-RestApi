@@ -35,7 +35,4 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL )
     List<Orders> orderList = new ArrayList<>();
 
-
-
-
 }
