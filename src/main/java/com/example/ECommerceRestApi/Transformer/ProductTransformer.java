@@ -13,6 +13,7 @@ public class ProductTransformer {
                 .price(productRequestDTO.getPrice())
                 .name(productRequestDTO.getName())
                 .quantity(productRequestDTO.getQuantity())
+                .mobileNo(productRequestDTO.getMobileNo())
                 .sellerName(productRequestDTO.getSellerName())
                 .build();
     }
@@ -24,6 +25,7 @@ public class ProductTransformer {
                 .price(product.getPrice())
                 .quantity(product.getQuantity())
                 .sellerName(product.getSellerName())
+                .mobileNo(product.getMobileNo())
                 .build();
     }
 }

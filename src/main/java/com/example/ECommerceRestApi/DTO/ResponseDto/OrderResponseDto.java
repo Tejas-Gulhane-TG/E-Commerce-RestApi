@@ -5,21 +5,27 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ProductResponseDTO {
+public class OrderResponseDto {
 
-    String name;
 
-    String sellerName;
+    int orderId;
+
+    int productId;
 
     int quantity;
 
+    String productName;
+
     double price;
 
-    long mobileNo;
-
     ProductType productType;
+
+    String UserName;
+
+    String Massage;
+
 }

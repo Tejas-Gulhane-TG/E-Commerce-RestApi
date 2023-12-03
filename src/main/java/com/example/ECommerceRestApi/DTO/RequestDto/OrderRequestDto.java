@@ -1,25 +1,23 @@
-package com.example.ECommerceRestApi.DTO.ResponseDto;
+package com.example.ECommerceRestApi.DTO.RequestDto;
 
 import com.example.ECommerceRestApi.Enum.ProductType;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ProductResponseDTO {
+public class OrderRequestDto {
 
-    String name;
-
-    String sellerName;
+    int productId;
 
     int quantity;
 
-    double price;
-
-    long mobileNo;
+    long userMoNo;
 
     ProductType productType;
 }

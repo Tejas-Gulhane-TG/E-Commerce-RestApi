@@ -7,23 +7,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ProductRequestDTO {
-
-
-    String name;
-
-    String sellerName;
-
-    int quantity;
-
-    long mobileNo;
-
-    double price;
+public class ProductBySeller {
 
     ProductType productType;
+
+    long mobileNo;
 }

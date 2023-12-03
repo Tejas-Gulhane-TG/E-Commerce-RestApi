@@ -21,6 +21,9 @@ public class Product {
 
     String sellerName;
 
+    @Column(nullable = false)
+    long mobileNo;
+
     int quantity;
 
     double price;
